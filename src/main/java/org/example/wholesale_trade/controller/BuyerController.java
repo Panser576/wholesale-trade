@@ -1,4 +1,4 @@
-package org.example.wholesale_trade;
+package org.example.wholesale_trade.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
