@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BuyerController {
-    @GetMapping("/buyer")
-    public String showBuyer(Model model){
-        model.addAttribute("name", "Пупырка");
+    @GetMapping("/")
+    public String buyer(Model model){
+        model.addAttribute("title", "Главная страница");
         return "buyer";
     }
 }
