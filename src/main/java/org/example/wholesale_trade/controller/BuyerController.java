@@ -11,4 +11,24 @@ public class BuyerController {
         model.addAttribute("title", "Главная страница");
         return "buyer";
     }
+    @GetMapping("/office")
+    public String office(Model model){
+        return "office";
+    }
+    @GetMapping("/contacts")
+    public String contacts(Model model){
+        return "contacts";
+    }
+    @GetMapping("/about")
+    public String about(Model model){
+        return "about";
+    }
+    @GetMapping("/shipping")
+    public String shipping(Model model){
+        return "shipping";
+    }
+    @GetMapping("/payment")
+    public String payment(Model model){
+        return "payment";
+    }
 }
