@@ -31,4 +31,5 @@ public class BuyerController {
     public String payment(Model model){
         return "payment";
     }
+
 }
