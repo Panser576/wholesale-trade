@@ -53,4 +53,13 @@ public class Post {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public Post() {
+    }
+
+    public Post(String title, String price, String full_text) {
+        this.title = title;
+        this.price = price;
+        this.full_text = full_text;
+    }
 }
