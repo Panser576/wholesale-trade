@@ -6,18 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BuyerController {
-    @GetMapping("/")
+    @GetMapping("/prais")
     public String buyer(Model model){
-        model.addAttribute("title", "Главная страница");
         return "buyer";
     }
     @GetMapping("/office")
     public String office(Model model){
         return "office";
-    }
-    @GetMapping("/contacts")
-    public String contacts(Model model){
-        return "contacts";
     }
     @GetMapping("/about")
     public String about(Model model){

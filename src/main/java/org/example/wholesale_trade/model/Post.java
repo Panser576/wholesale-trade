@@ -11,8 +11,9 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String title, price, full_text;
-    private int quantity;
+    private String title, full_text, image;
+    private int quantity, price;
+
 
     public Long getId() {
         return id;
@@ -30,11 +31,11 @@ public class Post {
         this.title = title;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -54,11 +55,22 @@ public class Post {
         this.quantity = quantity;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     public Post() {
     }
 
-    public Post(String title, String price, String full_text) {
+
+    public Post(String title, String image, int quantity, int price, String full_text) {
         this.title = title;
+        this.image = image;
+        this.quantity = quantity;
         this.price = price;
         this.full_text = full_text;
     }
