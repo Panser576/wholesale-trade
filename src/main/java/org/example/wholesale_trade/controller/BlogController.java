@@ -39,11 +39,41 @@ public class BlogController {
 
     @GetMapping("/{id}")
     public String praisInfo(@PathVariable(value = "id") long id, Model mobel) {
+        if(!postRepository.existsById(id)){
+            return "redirect:/";
+        }
         Optional<Post> post = postRepository.findById(id);
         ArrayList<Post> res = new ArrayList<>();
         post.ifPresent(res::add);
         mobel.addAttribute("post", res);
         return "prais-info";
     }
-
+    @GetMapping("/{id}/edit")
+    public String praisEdit(@PathVariable(value = "id") long id, Model mobel) {
+        if(!postRepository.existsById(id)){
+            return "redirect:/";
+        }
+        Optional<Post> post = postRepository.findById(id);
+        ArrayList<Post> res = new ArrayList<>();
+        post.ifPresent(res::add);
+        mobel.addAttribute("post", res);
+        return "prais-edit";
+    }
+    @PostMapping("/{id}/edit")
+    public String praisPostUpdate(@PathVariable(value = "id") long id, @RequestParam String title, @RequestParam String image, @RequestParam int quantity, @RequestParam int price,@RequestParam String full_text, Model mobel) {
+        Post post = postRepository.findById(id).orElseThrow();
+        post.setTitle(title);
+        post.setImage(image);
+        post.setFull_text(full_text);
+        post.setPrice(price);
+        post.setQuantity(quantity);
+        postRepository.save(post);
+        return "redirect:/";
+    }
+    @PostMapping("/{id}/remove")
+    public String praisPostDelete(@PathVariable(value = "id") long id, Model mobel) {
+        Post post = postRepository.findById(id).orElseThrow();
+        postRepository.delete(post);
+        return "redirect:/";
+    }
 }
