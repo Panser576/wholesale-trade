@@ -1,15 +1,16 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Особистий кабінет</title>
+  <title>Личный кабинет</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
-<body style="background-color: #faebd7">
+<body>
 <header th:insert="blocks/header :: header"></header>
 
 <div class="container mt-5">
-  <h1>Підписка на розсилки</h1><br>
+
+  <h1>Підписка 1 на розсилки</h1><br>
   <p>В особистому кабінеті Ви можете перевірити поточний стан кошика, хід виконання Ваших замовлень, переглянути або змінити особисту інформацію, а також підписатися на новини та інші інформаційні розсилки.</p><br>
   <h2>Особиста інформація</h2><br>
   <a href="#">Змінити реєстраційні дані</a><br>
@@ -18,7 +19,7 @@
   <a href="#">Подивитися вміст кошика</a><br>
   <a href="#">Подивитися історію замовлень</a><br>
 
-</div><br><br><br>
+</div>
 
 <div th:insert="blocks/footer :: footer"></div>
 

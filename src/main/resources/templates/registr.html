@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>registr</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/registr.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="">
+        <h2>Регистрация</h2>
+        <div class="form-field multy-input">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="first-name"
+            id="inpName"
+            placeholder="Введите имя"
+            onfocus="this.value=''"
+          />
+          <span class="error" id="username"></span>
+        </div>
+        <div class="form-field multy-input">
+          <label for="phone">Phone</label>
+          <input
+            type="text"
+            name="phone"
+            id="inpTel"
+            placeholder="Введите телефон"
+            onfocus="this.value=''"
+          />
+          <span class="error" id="tel"></span>
+        </div>
+        <div class="form-field input-right">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="inpEmail"
+            placeholder="Введите email"
+            onfocus="this.value=''"
+          />
+          <span class="error" id="email"></span>
+        </div>
+        <div class="form-field input-right">
+          <label for="pass">Password</label>
+          <input
+            type="text"
+            name="pass"
+            id="inpPass1"
+            placeholder="Введите пароль"
+            onfocus="this.value=''"
+          />
+          <span class="error" id="pass1"></span>
+        </div>
+        <div class="form-field input-right">
+          <label for="pass">Confirm</label>
+          <input
+            type="text"
+            name="pass"
+            id="inpPass2"
+            placeholder="Подтвердите пароль"
+            onfocus="this.value=''"
+          />
+          <span class="error" id="pass2"></span>
+        </div>
+        <div class="form-field submit-field">
+          <input type="button" id="btn" value="Регистрация" />
+        </div>
+      </form>
+    </div>
+
+    <script src="../../java/javas/registr.js"></script>
+  </body>
+</html>

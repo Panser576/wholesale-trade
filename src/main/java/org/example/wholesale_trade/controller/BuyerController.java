@@ -26,5 +26,13 @@ public class BuyerController {
     public String payment(Model model){
         return "payment";
     }
+    @GetMapping("/regs")
+    public String regs(Model model){
+        return "registr";
+    }
+    @GetMapping("/logs")
+    public String logs(Model model){
+        return "login";
+    }
 
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="templates/css/login.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="">
+        <h2>Авторизация</h2>
+        <div class="form-field input-right">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="inpEmail"
+            placeholder="Введите email"
+            onfocus="this.value=''"
+          />
+          <span class="error" id="email"></span>
+        </div>
+        <div class="form-field input-right">
+          <label for="pass">Password</label>
+          <input
+            type="text"
+            name="pass"
+            id="inpPass"
+            placeholder="Введите пароль"
+            onfocus="this.value=''"
+          />
+          <span class="error" id="pass"></span>
+        </div>
+        <div class="form-field submit-field">
+          <input type="button" id="button" value="Войти" />
+        </div>
+      </form>
+    </div>
+
+    <script src="../../java/javas/login.js"></script>
+  </body>
+</html>
